@@ -1,7 +1,10 @@
+import React from 'react'
+import CarForm from './Form'
+
 function App() {
   return (
     <div>
-      hello
+      <CarForm/>
     </div>
   );
 }
