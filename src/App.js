@@ -1,7 +1,11 @@
+import {Thomas} from './components/Thomas'
+
 function App() {
   return (
     <div>
-      hello
+      <Thomas/>
+      
+
     </div>
   );
 }
