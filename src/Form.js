@@ -38,8 +38,8 @@ export default function CarForm() {
             </label>
 
             <input type="submit" />
-            </form>
-        )
+            
+        
 
         <label>  Price:
             <input
@@ -52,7 +52,7 @@ export default function CarForm() {
             
             <input type="submit" />
             </form>
-    
+    )
      
      }
         
