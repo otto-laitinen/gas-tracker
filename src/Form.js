@@ -36,10 +36,7 @@ export default function CarForm() {
             onChange={handleChange}
             />
             </label>
-
-            <input type="submit" />
             
-        
 
         <label>  Price:
             <input
