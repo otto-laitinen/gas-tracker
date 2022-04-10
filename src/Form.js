@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ReactDOM } from "react-dom";
 
-export default function CarForm() {
+export default function CarForm({addCar}) {
 
     const [carInfo, setCarInfo] = useState({
         name:"",
