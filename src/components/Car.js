@@ -1,11 +1,16 @@
 import React from 'react'
 
-export default function Car(props){
+export default function CarList({allCars}){
   return (
     <div>
-        <div>Car name: {props.name}</div>
-        <div>Year: {props.year}</div>
+       {allCars.map((car)=>(
+         <div className="name" key={car.phonenumber}>
+           <p className='card-name'>{car.name}</p>
+           <p>{car.email}</p>
+           <p>{car.phonenumber}</p>
+          </div>
+       ))}
     </div>
-  )
+  );
 }
 
