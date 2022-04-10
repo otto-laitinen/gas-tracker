@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ReactDOM } from "react-dom";
+import './Form.css'
 
 export default function CarForm({addCar}) {
 
@@ -27,7 +28,7 @@ export default function CarForm({addCar}) {
         <div className="form-container">
             <form onSubmit={handleSubmit}> 
                 <div>
-                    <middle><h3>Car Form</h3></middle>
+                    <h1 className="title">Car Form</h1>
                 </div>
                 <div>
                     <input
@@ -57,7 +58,7 @@ export default function CarForm({addCar}) {
                     />
                 </div>
                 <div>
-                    <button>Submit Car</button>
+                    <button className="Submit">Submit Car</button>
                 </div>
                 
             </form>
