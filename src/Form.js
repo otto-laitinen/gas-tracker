@@ -2,55 +2,66 @@ import { useState } from "react";
 import { ReactDOM } from "react-dom";
 
 export default function CarForm() {
-    const [inputs, setInputs] = useState({});
+
+    const [carInfo, setCarInfo] = useState({
+        name:"",
+        email:"",
+        phonenumber:"",
+    });
 
     const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        console.log(name, value)
-        setInputs(values => ({...values, [name]: value}))
+        setCarInfo({ ...carInfo, [event.target.name]: event.target.value})
     }
-
-    const submit = (event) => {
-        console.log("submitted")
+    
+    const handleSubmit = (event) => {
+        //prevents the sbumit button from refresheing the page
         event.preventDefault();
-        console.log(inputs);
-    }
+        console.log(carInfo);
+        setCarInfo({ name: "", email: "", phonenumber: ""});
+    };
+
 
     return (
-        <form onSubmit={submit}>
-        <label> Car Brand:
-            <input
-            type="text"
-            name="carbrand"
-            value={inputs.carbrand || ""}
-            onChange={handleChange}
-            />
-            </label>
-
-        <label>  Quantity:
-            <input
-            type="number"
-            name="quantity"
-            value={inputs.quantity || ""}
-            onChange={handleChange}
-            />
-            </label>
-            
-
-        <label>  Price:
-            <input
-            type="number"
-            name=" price"
-            value={inputs.price || ""}
-            onChange={handleChange}
-            />
-            </label>
-            
-            <input type="submit" />
+        <div className="form-container">
+            <form onSubmit={handleSubmit}> 
+                <div>
+                    <h3>Car Form</h3>
+                </div>
+                <div>
+                    <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={carInfo.name}
+                    onChange={handleChange}
+                    />
+                </div>
+                <div>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={carInfo.email}
+                    onChange={handleChange}
+                    />
+                </div>
+                <div>
+                <input
+                    type="number"
+                    name="phonenumber"
+                    placeholder="Phone number"
+                    value={carInfo.phonenumber}
+                    onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <button>Submit Car</button>
+                </div>
+                
             </form>
-    )
-     
-     }
+        </div>
+    );
+}
+
         
 // ReactDOM.render(<CarForm />, document.getElementById('root'))
