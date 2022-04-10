@@ -68,7 +68,7 @@ export default function CarForm({addCar}) {
                     />
                 </div>
                 <div>
-                    <button className="Submit">Submit Car</button>
+                    <button className="submit">Submit Car</button>
                 </div>
                 
             </form>

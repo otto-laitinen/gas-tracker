@@ -1,16 +1,61 @@
+
+/*  Form.js  */
+
 .form-container {
     margin-right: 45%;
     margin-left: 45%;
 }
 
 .title  {
-    color: red;
+    color: tomato;
     font-style: italic;
+    position: relative; left:18px;
     
 }
 
 .submit {
-    
+    position: relative; top:10px; left:45px;
 }
 
 
+/*  Car.js  */
+
+.list {
+    margin-right: 45%;
+    margin-left: 45%;
+    position: relative; top:25px;
+
+}
+
+.title_car_info {
+    color: tomato;
+    font-style: italic;
+    position: relative; left:8px
+}
+
+.name-box {
+    border: 1px solid black;
+    position:relative; top:16px
+}
+
+.distance-box {
+    border: 1px solid black;
+}
+
+.liters-box {
+    border: 1px solid black;
+    position:relative; top:-16px
+}
+
+.price-box {
+    border: 1px solid black;
+    position:relative; top:-32px
+}
+
+.car-info-list {
+    position:relative; top:-16px; left:-1px;
+}
+
+.vivi {
+    font-style: blue;
+}

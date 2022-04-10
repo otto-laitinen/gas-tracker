@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Form from './Form'
 import CarList from './components/Car'
+import './Form.css'
 
 function App() {
   // Example list. Instead of a hard coded list like this, we want to add objects to this list by submitting the form:
@@ -11,8 +12,9 @@ function App() {
   //name={car.name} 
   //year={car.year}
   // />))
-  const [allCars, seeAllCars] = useState([]);
   
+  const [allCars, seeAllCars] = useState([]);
+ 
   const addCar = (carInfo)=> {
     seeAllCars([...allCars, carInfo]);
   };
@@ -21,7 +23,9 @@ function App() {
   return (
     <div>
     <Form addCar ={addCar}/>
+    <div className='vivi'>
     <CarList allCars={allCars}/>
+    </div>
     </div>
   );
 }
