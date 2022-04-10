@@ -8,13 +8,15 @@ export default function CarForm() {
         email:"",
         phonenumber:"",
     });
-
+    
+        // handleChange updates the input field.
     const handleChange = (event) => {
+        // setCarInfo is a function that updates the current state boject.
         setCarInfo({ ...carInfo, [event.target.name]: event.target.value})
     }
     
     const handleSubmit = (event) => {
-        //prevents the sbumit button from refresheing the page
+        // prevents the subumit button from refresheing the page
         event.preventDefault();
         addCar(carInfo);
         setCarInfo({ name: "", email: "", phonenumber: ""});
@@ -25,7 +27,7 @@ export default function CarForm() {
         <div className="form-container">
             <form onSubmit={handleSubmit}> 
                 <div>
-                    <h3>Car Form</h3>
+                    <middle><h3>Car Form</h3></middle>
                 </div>
                 <div>
                     <input
@@ -33,7 +35,7 @@ export default function CarForm() {
                     name="name"
                     placeholder="Name"
                     value={carInfo.name}
-                    onChange={handleChange}
+                    onChange={handleChange} //onChange is how react updates the input fields in real time.
                     />
                 </div>
                 <div>
