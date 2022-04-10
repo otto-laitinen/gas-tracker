@@ -12,7 +12,7 @@ function App() {
   //year={car.year}
   // />))
   const [allCars, seeAllCars] = useState([]);
-
+  
   const addCar = (carInfo)=> {
     seeAllCars([...allCars, carInfo]);
   };

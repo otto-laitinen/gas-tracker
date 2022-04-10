@@ -6,8 +6,9 @@ export default function CarForm({addCar}) {
 
     const [carInfo, setCarInfo] = useState({
         name:"",
-        email:"",
-        phonenumber:"",
+        distance:"",
+        litersRefuel:"",
+        priceRefuel:"",
     });
     
         // handleChange updates the input field.
@@ -20,7 +21,7 @@ export default function CarForm({addCar}) {
         // prevents the subumit button from refresheing the page
         event.preventDefault();
         addCar(carInfo);
-        setCarInfo({ name: "", email: "", phonenumber: ""});
+        setCarInfo({ name: "", distance: "", litersRefuel: "",priceRefuel:""});
     };
 
 
@@ -34,26 +35,35 @@ export default function CarForm({addCar}) {
                     <input
                     type="text"
                     name="name"
-                    placeholder="Name"
+                    placeholder="Name of car"
                     value={carInfo.name}
                     onChange={handleChange} //onChange is how react updates the input fields in real time.
                     />
                 </div>
                 <div>
                 <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={carInfo.email}
+                    type="number"
+                    name="distance"
+                    placeholder="Distance driven"
+                    value={carInfo.distance}
                     onChange={handleChange}
                     />
                 </div>
                 <div>
                 <input
                     type="number"
-                    name="phonenumber"
-                    placeholder="Phone number"
-                    value={carInfo.phonenumber}
+                    name="litersRefuel"
+                    placeholder="Liters of refuel"
+                    value={carInfo.litersRefuel}
+                    onChange={handleChange}
+                    />
+                </div>
+                <div>
+                <input
+                    type="number"
+                    name="priceRefuel"
+                    placeholder="Price of refuel"
+                    value={carInfo.priceRefuel}
                     onChange={handleChange}
                     />
                 </div>
