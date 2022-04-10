@@ -16,7 +16,7 @@ export default function CarForm() {
     const handleSubmit = (event) => {
         //prevents the sbumit button from refresheing the page
         event.preventDefault();
-        console.log(carInfo);
+        addCar(carInfo);
         setCarInfo({ name: "", email: "", phonenumber: ""});
     };
 
