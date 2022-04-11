@@ -1,15 +1,18 @@
 import { useState } from "react";
 import { ReactDOM } from "react-dom";
+import {omit} from 'lodash';
 
 export default function CarForm({addCar}) {
 
+    //Form values
     const [carInfo, setCarInfo] = useState({
-        name:"",
+        nameCar:"",
         distance:"",
         litersRefuel:"",
         priceRefuel:"",
     });
     
+
         // handleChange updates the input field.
     const handleChange = (event) => {
         // setCarInfo is a function that updates the current state boject.
@@ -20,7 +23,7 @@ export default function CarForm({addCar}) {
         // prevents the subumit button from refresheing the page
         event.preventDefault();
         addCar(carInfo);
-        setCarInfo({ name: "", distance: "", litersRefuel: "",priceRefuel:""});
+        setCarInfo({ nameCar: "", distance: "", litersRefuel: "",priceRefuel:""});
     };
 
 
@@ -33,7 +36,7 @@ export default function CarForm({addCar}) {
                 <div>
                     <input
                     type="text"
-                    name="name"
+                    nameCar="name"
                     placeholder="Name of car"
                     value={carInfo.name}
                     onChange={handleChange} //onChange is how react updates the input fields in real time.
