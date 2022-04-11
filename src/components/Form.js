@@ -2,7 +2,7 @@ import '../Form.css'
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
-export default function CarForm({addCar}) {
+export default function CarForm() {
 
     const [carInfo, setCarInfo] = useState({
         name:"",
@@ -23,7 +23,6 @@ export default function CarForm({addCar}) {
     const handleSubmit = (event) => {
         // prevents the subumit button from refresheing the page
         event.preventDefault();
-        // addCar(carInfo);
         setCarInfo({ name: "", distance: "", litersRefuel: "",priceRefuel:""});
         addFuelExpense(carInfo);
     };
