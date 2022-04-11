@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Car } from './Car'
+import Car from './Car'
 import { GlobalContext } from '../context/GlobalState'
 
 // List of all individual expenses
