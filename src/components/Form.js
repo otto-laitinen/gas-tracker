@@ -42,7 +42,8 @@ export default function CarForm({addCar}) {
                     placeholder="Name of car"
                     value={carInfo.name}
                     onChange={handleChange} //onChange is how react updates the input fields in real time.
-                    required />
+                    required //doess not leave empty fields when submited
+                    />
                 </div>
                 <div>
                 <input
