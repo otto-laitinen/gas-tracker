@@ -42,6 +42,7 @@ export default function CarForm({addCar}) {
                     placeholder="Name of car"
                     value={carInfo.name}
                     onChange={handleChange} //onChange is how react updates the input fields in real time.
+                    required //input required
                     />
                 </div>
                 <div>
@@ -51,6 +52,7 @@ export default function CarForm({addCar}) {
                     placeholder="Distance driven"
                     value={carInfo.distance}
                     onChange={handleChange}
+                    required
                     />
                 </div>
                 <div>
@@ -60,6 +62,7 @@ export default function CarForm({addCar}) {
                     placeholder="Liters of refuel"
                     value={carInfo.litersRefuel}
                     onChange={handleChange}
+                    required
                     />
                 </div>
                 <div>
@@ -69,6 +72,7 @@ export default function CarForm({addCar}) {
                     placeholder="Price of refuel"
                     value={carInfo.priceRefuel}
                     onChange={handleChange}
+                    required
                     />
                 </div>
                 <div>
