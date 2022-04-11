@@ -1,4 +1,4 @@
-// import '../Form.css'
+import '../Form.css'
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
 

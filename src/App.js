@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Form from './components/Form'
 import CarList from './components/CarList'
-// import './Form.css'
+import './Form.css'
 import { GlobalProvider } from './context/GlobalState';
 
 function App() {
