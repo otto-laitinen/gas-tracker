@@ -1,4 +1,4 @@
-import '../Form.css'
+// import '../Form.css'
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
@@ -33,7 +33,7 @@ export default function CarForm({addCar}) {
         <div className="form-container">
             <form onSubmit={handleSubmit}> 
                 <div>
-                    <h1 className="title">Car Form</h1>
+                    <middle><h3>Car Form</h3></middle>
                 </div>
                 <div>
                     <input
@@ -72,7 +72,7 @@ export default function CarForm({addCar}) {
                     />
                 </div>
                 <div>
-                    <button className="submit">Submit Car</button>
+                    <button>Submit Car</button>
                 </div>
                 
             </form>
