@@ -17,9 +17,9 @@ export const TotalStats = () => {
     const priceTotal = prices3.reduce((acc,item)=> acc + item,0);
   
     // Average
-  const priceAverage1 = prices1.reduce((acc, item) => (acc += item), 0).toFixed(2) / prices1.length
-  const priceAverage2 = prices2.reduce((acc, item) => (acc += item), 0).toFixed(2) / prices2.length
-  const priceAverage3 = prices3.reduce((acc, item) => (acc += item), 0).toFixed(2) / prices3.length
+  const priceAverage1 = (prices1.reduce((acc, item) => (acc += item), 0) / prices1.length).toFixed(2)
+  const priceAverage2 = (prices2.reduce((acc, item) => (acc += item), 0) / prices2.length).toFixed(2)
+  const priceAverage3 = (prices3.reduce((acc, item) => (acc += item), 0) / prices3.length).toFixed(2)
 
   return (
     <div>
