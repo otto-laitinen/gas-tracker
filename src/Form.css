@@ -16,6 +16,7 @@
     height: 30px;
     padding: 5px;
     margin: 20px;
+    font-size: 15px;
 }
 
 #d2 input {
@@ -25,6 +26,7 @@
     height: 30px;
     padding: 5px;
     margin: 20px;
+    font-size: 15px;
 }
 
 #d3 input {
@@ -34,6 +36,7 @@
     height: 30px;
     padding: 5px;
     margin: 20px;
+    font-size: 15px;
 }
 
 #d4 input {
@@ -43,6 +46,7 @@
     height: 30px;
     padding: 5px;
     margin: 20px;
+    font-size: 15px;
 }
 
 .title  {
@@ -70,6 +74,7 @@
     margin-left: 70%;
     top:-10pt;
     font-size: 15pt;
+    
 }
 
 .title_car_info {
@@ -114,8 +119,7 @@
 
 .average {
     position: absolute;
-    margin-right: 42%;
-    margin-left: 45%;
+    margin-left: 40%;
     border-style: solid;
     padding: 15px;
     font-size: 15pt;
@@ -124,4 +128,21 @@
 #a1 {
     color: rgb(205, 71, 47);
     font-style: italic;
+}
+
+#a2 {
+    color: rgb(205, 71, 47);
+    font-style: italic;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
