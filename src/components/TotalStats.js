@@ -16,7 +16,7 @@ export const TotalStats = () => {
 
   return (
     <div>
-             <h2> Average prices:</h2>
+             <h2> Average </h2>
         <div>
             <h4>Distance</h4>
             <p className="">{priceAverage1}</p>
