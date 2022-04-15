@@ -73,7 +73,7 @@
 }
 
 .title_car_info {
-    color: tomato;
+    color: rgb(205, 71, 47);
     font-style: italic;
     position: relative;
 }
@@ -108,4 +108,20 @@
 
 .vivi {
     font-style: blue;
+}
+
+/*  TotalStats.js  */
+
+.average {
+    position: absolute;
+    margin-right: 42%;
+    margin-left: 45%;
+    border-style: solid;
+    padding: 15px;
+    font-size: 15pt;
+}
+
+#a1 {
+    color: rgb(205, 71, 47);
+    font-style: italic;
 }

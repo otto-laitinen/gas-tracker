@@ -15,8 +15,8 @@ export const TotalStats = () => {
   const priceAverage3 = prices3.reduce((acc, item) => (acc += item), 0).toFixed(2) / prices3.length
 
   return (
-    <div>
-             <h2> Average prices:</h2>
+    <div className="average">
+             <h1 id="a1"> Average prices:</h1>
         <div>
             <h4>Distance</h4>
             <p className="">{priceAverage1}</p>
