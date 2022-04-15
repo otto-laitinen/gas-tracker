@@ -21,6 +21,10 @@ export const TotalStats = () => {
   const priceAverage2 = (prices2.reduce((acc, item) => (acc += item), 0) / prices2.length).toFixed(2)
   const priceAverage3 = (prices3.reduce((acc, item) => (acc += item), 0) / prices3.length).toFixed(2)
 
+  // Consumption and price per 100km (of all cars combined)
+  const pricePerHundredKm = (priceTotal / distanceTotal * 100).toFixed(2);
+  const litersPerHundredKm = (litersTotal / distanceTotal * 100).toFixed(2);
+
   return (
     <div>
             <h2>Totals</h2>
@@ -33,13 +37,17 @@ export const TotalStats = () => {
             <h4>Price</h4>
             <p classname="">${priceTotal}</p>
 
-            <h2>Average prices:</h2>
+            <h2>Average:</h2>
             <h4>Distance</h4>
             <p className="">{priceAverage1}</p>
             <h4>Liters refuel</h4>
             <p className="">{priceAverage2}</p>
             <h4>Price refuel</h4>
             <p className="">${priceAverage3}</p>
+
+            <h2>Average per 100km:</h2>
+            <p>{pricePerHundredKm}€ / 100km</p>
+            <p>{litersPerHundredKm}l / 100km</p>
         
 
     </div>
