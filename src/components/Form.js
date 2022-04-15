@@ -32,9 +32,9 @@ export default function CarForm() {
         <div className="form-container">
             <form onSubmit={handleSubmit}> 
                 <div>
-                    <middle><h3>Car Form</h3></middle>
+                    <h1 className="title">Car Form</h1>
                 </div>
-                <div>
+                <div id="d1">
                     <input
                     type="text"
                     name="name"
@@ -44,7 +44,7 @@ export default function CarForm() {
                     required //input required
                     />
                 </div>
-                <div>
+                <div id="d2">
                 <input
                     type="number"
                     name="distance"
@@ -54,7 +54,7 @@ export default function CarForm() {
                     required
                     />
                 </div>
-                <div>
+                <div id="d3">
                 <input
                     type="number"
                     name="litersRefuel"
@@ -64,7 +64,7 @@ export default function CarForm() {
                     required
                     />
                 </div>
-                <div>
+                <div id="d4">
                 <input
                     type="number"
                     name="priceRefuel"
@@ -75,7 +75,7 @@ export default function CarForm() {
                     />
                 </div>
                 <div>
-                    <button>Submit Car</button>
+                    <button className="submit">Submit Car</button>
                 </div>
                 
             </form>

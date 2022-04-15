@@ -2,40 +2,86 @@
 /*  Form.js  */
 
 .form-container {
-    margin-right: 45%;
-    margin-left: 45%;
+    left: 15pt;
+    margin-right: 60%;
+    font-size: 30pt;
+    border-style: solid;
+    background-color: #d0c3c366;
+}
+
+#d1 input {
+    border-radius: 8px;
+    border-style: ridge;
+    width: 500px;
+    height: 30px;
+    padding: 5px;
+    margin: 20px;
+}
+
+#d2 input {
+    border-radius: 8px;
+    border-style: ridge;
+    width: 500px;
+    height: 30px;
+    padding: 5px;
+    margin: 20px;
+}
+
+#d3 input {
+    border-radius: 8px;
+    border-style: solid;
+    width: 500px;
+    height: 30px;
+    padding: 5px;
+    margin: 20px;
+}
+
+#d4 input {
+    border-radius: 8px;
+    border-style: solid;
+    width: 500px;
+    height: 30px;
+    padding: 5px;
+    margin: 20px;
 }
 
 .title  {
-    color: tomato;
+    color: rgb(205, 71, 47);
     font-style: italic;
-    position: relative; left:18px;
+    position: relative; left: 16px;
     
 }
 
 .submit {
-    position: relative; top:10px; left:45px;
+    position: relative; top:70px; left:16px;
+    background-color: #4CAF50;
+    font-size: 20pt;
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+    padding: 10px;
 }
 
 
 /*  Car.js  */
 
 .list {
-    margin-right: 45%;
-    margin-left: 45%;
-    position: relative; top:25px;
-
+    position : absolute;
+    margin-left: 70%;
+    top:-10pt;
+    font-size: 15pt;
 }
 
 .title_car_info {
     color: tomato;
     font-style: italic;
-    position: relative; left:8px
+    position: relative;
 }
 
 .name-box {
+    position: relative;
     border: 1px solid black;
-    position:relative; top:16px
+    top: 16px;
 }
 
 .distance-box {
@@ -43,17 +89,21 @@
 }
 
 .liters-box {
+    position: relative;
     border: 1px solid black;
-    position:relative; top:-16px
+    top:-16px;
 }
 
 .price-box {
+    position: relative;
     border: 1px solid black;
-    position:relative; top:-32px
+    top:-32px;
 }
 
 .car-info-list {
-    position:relative; top:-16px; left:-1px;
+    position: relative;
+    border-style: solid;
+    padding: 10px;
 }
 
 .vivi {
