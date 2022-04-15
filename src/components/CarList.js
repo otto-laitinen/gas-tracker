@@ -7,8 +7,8 @@ export default function CarList () {
   const context = useContext(GlobalContext);
 
   return (
-    <div>
-        <h3>History</h3>
+    <div className='list'>
+      <h1 className="title_car_info">Car information history</h1>
         <ul>
           {context.fuelExpenses.map(
             fuelExpense => (<Car key={fuelExpense.id} fuelExpense={fuelExpense}/>)

@@ -34,6 +34,8 @@ export const TotalStats = () => {
             <p classname="">${priceTotal}</p>
 
             <h2>Average prices:</h2>
+             <h2> Average </h2>
+        <div>
             <h4>Distance</h4>
             <p className="">{priceAverage1}</p>
             <h4>Liters refuel</h4>
