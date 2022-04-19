@@ -4,15 +4,11 @@ import { GlobalContext } from '../context/GlobalState'
 
 export default function CarForm() {
 
-    const context = useContext(GlobalContext);
-
-
     const [carInfo, setCarInfo] = useState({
         name:"",
         distance:"",
         litersRefuel:"",
         priceRefuel:"",
-        id:0
     });
 
     const {addFuelExpense} = useContext(GlobalContext)
@@ -23,9 +19,9 @@ export default function CarForm() {
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        setCarInfo({ name: "", distance: "", litersRefuel: "", priceRefuel:"", id: (context.fuelExpenses.length +1) });
+        setCarInfo({ name: "", distance: "", litersRefuel: "", priceRefuel:""});
         console.log(carInfo)
-        // CHECK IF THE ID IS IN THE LIST
+        // CHECK IF THE name IS IN THE LIST
         // IF NOT--> ADD NEW FUEL EXPENSE
         addFuelExpense(carInfo);
         // IF YES --> UPDATE THE EXISTING FUEL EXPENSE
