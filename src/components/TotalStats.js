@@ -28,21 +28,21 @@ export const TotalStats = () => {
   return (
     <div className="average">
             <h2 id="a1">Totals:</h2>
-            <h4>Cars <i class="arrow down"></i></h4>
-            <p classname="">{namesTotal}</p>
-            <h4>Distance <i class="arrow down"></i></h4>
-            <p classname="">{distanceTotal}</p>
-            <h4>Liters <i class="arrow down"></i></h4>
-            <p classname="">{litersTotal}</p>
-            <h4>Price <i class="arrow down"></i></h4>
-            <p classname="">${priceTotal}</p>
+            <h4>Cars <i className="arrow down"></i></h4>
+            <p className="">{namesTotal}</p>
+            <h4>Distance <i className="arrow down"></i></h4>
+            <p className="">{distanceTotal}</p>
+            <h4>Liters <i className="arrow down"></i></h4>
+            <p className="">{litersTotal}</p>
+            <h4>Price <i className="arrow down"></i></h4>
+            <p className="">${priceTotal}</p>
 
             <h2 id="a2">Average:</h2>
-            <h4>Distance <i class="arrow down"></i></h4>
+            <h4>Distance <i className="arrow down"></i></h4>
             <p className="">{priceAverage1}</p>
-            <h4>Liters refuel <i class="arrow down"></i></h4>
+            <h4>Liters refuel <i className="arrow down"></i></h4>
             <p className="">{priceAverage2}</p>
-            <h4>Price refuel <i class="arrow down"></i></h4>
+            <h4>Price refuel <i className="arrow down"></i></h4>
             <p className="">${priceAverage3}</p>
 
             <h2>Average per 100km:</h2>

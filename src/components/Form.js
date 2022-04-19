@@ -82,6 +82,3 @@ export default function CarForm() {
         </div>
     );
 }
-
-        
-// ReactDOM.render(<CarForm />, document.getElementById('root'))
