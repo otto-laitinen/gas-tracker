@@ -3,6 +3,7 @@ import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
 export default function CarForm() {
+    const context = useContext(GlobalContext);
 
     const [carInfo, setCarInfo] = useState({
         name:"",
@@ -20,10 +21,24 @@ export default function CarForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         setCarInfo({ name: "", distance: "", litersRefuel: "", priceRefuel:""});
-        console.log(carInfo)
+        // console.log(carInfo)
         // CHECK IF THE name IS IN THE LIST
         // IF NOT--> ADD NEW FUEL EXPENSE
-        addFuelExpense(carInfo);
+        let x = true
+        for ( let i of context.fuelExpenses){
+            if (i.name === carInfo.name){
+                x = false
+            }
+        }
+        if (x){
+            addFuelExpense(carInfo);
+        }
+
+
+        // for(let i = 0; i < context.fuelExpenses.length; i++){
+
+        // }
+        // addFuelExpense(carInfo);
         // IF YES --> UPDATE THE EXISTING FUEL EXPENSE
         // *function here*
     };
