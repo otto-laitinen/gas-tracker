@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function CarList(props){
+// INDIVIDUAL CAR
+export default function Car(props){
   return (
     <div>
          <div className="car-info-list" key={props.fuelExpense.priceRefuel}>
