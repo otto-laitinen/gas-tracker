@@ -13,20 +13,15 @@ export default function CarForm() {
 
     const {addFuelExpense} = useContext(GlobalContext)
 
-    
-        // handleChange updates the input field.
     const handleChange = (event) => {
-        // setCarInfo is a function that updates the current state boject.
         setCarInfo({ ...carInfo, [event.target.name]: event.target.value})
     }
     
     const handleSubmit = (event) => {
-        // prevents the subumit button from refresheing the page
         event.preventDefault();
         setCarInfo({ name: "", distance: "", litersRefuel: "",priceRefuel:""});
         addFuelExpense(carInfo);
     };
-
 
     return (
         <div className="form-container">
