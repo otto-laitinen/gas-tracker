@@ -35,7 +35,7 @@ export const TotalStats = () => {
             <h4>Liters <i className="arrow down"></i></h4>
             <p className="">{litersTotal}</p>
             <h4>Price <i className="arrow down"></i></h4>
-            <p className="">${priceTotal}</p>
+            <p className="">{priceTotal}</p>
 
             <h2 id="a2">Average:</h2>
             <h4>Distance <i className="arrow down"></i></h4>
@@ -43,7 +43,7 @@ export const TotalStats = () => {
             <h4>Liters refuel <i className="arrow down"></i></h4>
             <p className="">{litersAverage}</p>
             <h4>Price refuel <i className="arrow down"></i></h4>
-            <p className="">${priceAverage}</p>
+            <p className="">{priceAverage}</p>
 
             <h2>Average per 100km:</h2>
             <p>{pricePerHundredKm}€ / 100km</p>
