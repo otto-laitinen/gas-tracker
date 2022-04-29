@@ -5,7 +5,7 @@ export default (state, action) => {
 
         case 'UPDATE_FUEL_EXPENSE':
             for (let car of state.fuelExpenses){
-                if (car.name === action.payload.name){
+                if (car.name.toUpperCase() === action.payload.name.toUpperCase()){
                     car.distance += action.payload.distance
                     car.litersRefuel += action.payload.litersRefuel
                     car.priceRefuel += action.payload.priceRefuel

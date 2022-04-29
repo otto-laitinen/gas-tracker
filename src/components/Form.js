@@ -13,7 +13,6 @@ export default function CarForm() {
     });
 
     const {addFuelExpense, updateFuelExpense} = useContext(GlobalContext);
-    // const {updateFuelExpense} = useContext(GlobalContext)
 
     const handleChange = (event) => {
         setCarInfo({ ...carInfo, [event.target.name]: event.target.name === "name" ? event.target.value : parseFloat(event.target.value)})
@@ -25,7 +24,7 @@ export default function CarForm() {
         console.log(carInfo);
         let x = true
         for ( let i of context.fuelExpenses){
-            if (i.name === carInfo.name){
+            if (i.name.toUpperCase() === carInfo.name.toUpperCase()){
                 x = false
             }
         }
