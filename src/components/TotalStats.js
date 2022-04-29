@@ -39,15 +39,15 @@ export const TotalStats = () => {
 
             <h2 id="a2">Average:</h2>
             <h4>Distance <i className="arrow down"></i></h4>
-            <p className="">{distanceAverage} km</p>
+            <p className="">{distanceAverage > 0 ? distanceAverage : 0} km</p>
             <h4>Liters refuel <i className="arrow down"></i></h4>
-            <p className="">{litersAverage} l</p>
+            <p className="">{litersAverage > 0 ? litersAverage : 0} l</p>
             <h4>Price refuel <i className="arrow down"></i></h4>
-            <p className="">{priceAverage} €</p>
+            <p className="">{priceAverage > 0 ? priceAverage : 0} €</p>
 
             <h2>Average per 100km:</h2>
-            <p>{pricePerHundredKm}€ / 100km</p>
-            <p>{litersPerHundredKm}l / 100km</p>
+            <p>{pricePerHundredKm > 0 ? pricePerHundredKm : 0} € / 100km</p>
+            <p>{litersPerHundredKm > 0 ? litersPerHundredKm : 0} l / 100km</p>
     </div>
   )
 } 
