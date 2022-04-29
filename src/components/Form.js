@@ -28,11 +28,7 @@ export default function CarForm() {
                 car_exists = true;
             }
         }
-        if (car_exists){
-            updateFuelExpense(carInfo);
-        } else{
-            addFuelExpense(carInfo);
-        }
+        car_exists ? updateFuelExpense(carInfo) : addFuelExpense(carInfo);
     };
 
     return (
