@@ -11,7 +11,7 @@ export default function CarList () {
       <h1 className="title_car_info">Car information history</h1>
         <ul>
           {context.fuelExpenses.map(
-            fuelExpense => (<Car key={fuelExpense.id} fuelExpense={fuelExpense}/>)
+            fuelExpense => (<Car key={fuelExpense.name} fuelExpense={fuelExpense}/>)
           )}
         </ul>
     </div>

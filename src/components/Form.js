@@ -12,18 +12,17 @@ export default function CarForm() {
         priceRefuel:"",
     });
 
-    const {addFuelExpense} = useContext(GlobalContext)
+    const {addFuelExpense, updateFuelExpense} = useContext(GlobalContext);
+    // const {updateFuelExpense} = useContext(GlobalContext)
 
     const handleChange = (event) => {
-        setCarInfo({ ...carInfo, [event.target.name]: event.target.value})
+        setCarInfo({ ...carInfo, [event.target.name]: event.target.name === "name" ? event.target.value : parseFloat(event.target.value)})
     }
     
     const handleSubmit = (event) => {
         event.preventDefault();
         setCarInfo({ name: "", distance: "", litersRefuel: "", priceRefuel:""});
-        // console.log(carInfo)
-        // CHECK IF THE name IS IN THE LIST
-        // IF NOT--> ADD NEW FUEL EXPENSE
+        console.log(carInfo);
         let x = true
         for ( let i of context.fuelExpenses){
             if (i.name === carInfo.name){
@@ -32,15 +31,9 @@ export default function CarForm() {
         }
         if (x){
             addFuelExpense(carInfo);
+        } else{
+            updateFuelExpense(carInfo);
         }
-
-
-        // for(let i = 0; i < context.fuelExpenses.length; i++){
-
-        // }
-        // addFuelExpense(carInfo);
-        // IF YES --> UPDATE THE EXISTING FUEL EXPENSE
-        // *function here*
     };
 
     return (
