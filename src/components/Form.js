@@ -22,16 +22,16 @@ export default function CarForm() {
         event.preventDefault();
         setCarInfo({ name: "", distance: "", litersRefuel: "", priceRefuel:""});
         console.log(carInfo);
-        let x = true
-        for ( let i of context.fuelExpenses){
-            if (i.name.toUpperCase() === carInfo.name.toUpperCase()){
-                x = false
+        let car_exists = false;
+        for (let car of context.fuelExpenses){
+            if (car.name.toUpperCase() === carInfo.name.toUpperCase()){
+                car_exists = true;
             }
         }
-        if (x){
-            addFuelExpense(carInfo);
-        } else{
+        if (car_exists){
             updateFuelExpense(carInfo);
+        } else{
+            addFuelExpense(carInfo);
         }
     };
 
